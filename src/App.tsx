@@ -103,7 +103,7 @@ function MainApp() {
   };
 
   return (
-    <div className="min-h-screen bg-[#F8F9FD] flex font-sans text-slate-900 antialiased">
+    <div className="min-h-screen bg-gradient-to-br from-[#EEF4FE] via-[#F4F1FD] to-[#FCF5FF] flex font-sans text-slate-900 antialiased selection:bg-sky-200">
       {/* Global Sidebar (PRD Section 3 & 6.2) */}
       <Sidebar currentTab={currentTab} onNavigate={handleNavigate} storageUsageMb={7.8} />
 
@@ -136,8 +136,8 @@ function MainApp() {
         </main>
       </div>
 
-      {/* Floating AI Assistant Drawer in Bottom-Right */}
-      <AiFloatingDrawer onOpenFullPage={() => handleNavigate('ai')} />
+      {/* Floating AI Assistant Drawer (when not on Home page, since Home page has the docked AI Assistant matching mockup) */}
+      {currentTab !== 'home' && <AiFloatingDrawer onOpenFullPage={() => handleNavigate('ai')} />}
 
       {/* Excel Export Modal */}
       <ExcelExportModal isOpen={showExportModal} onClose={() => setShowExportModal(false)} />

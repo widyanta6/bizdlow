@@ -1,7 +1,8 @@
 import {
   User, Business, Account, BalanceCorrection, BalanceAdjustmentType, Transaction, Product,
   Order, FileItem, FolderItem, KOLCommission, PayrollRecord,
-  FinancialArchive, BlogPost, AuditLog, PeriodFilter, CalendarEvent
+  FinancialArchive, BlogPost, AuditLog, PeriodFilter, CalendarEvent,
+  DataResetType, DataResetSummary, DataResetResult
 } from '../types/index';
 
 class ApiService {
@@ -519,6 +520,32 @@ class ApiService {
     const data = await res.json();
     if (!res.ok) throw new Error(data.error || 'Layanan AI mengalami kendala');
     return data.reply;
+  }
+
+  // Data Reset & Snapshots
+  async getDataResetSummary(businessId: string): Promise<DataResetSummary> {
+    const res = await fetch(`/api/businesses/${businessId}/data-reset/summary`, {
+      headers: this.getHeaders(),
+    });
+    const data = await res.json();
+    if (!res.ok) throw new Error(data.error || 'Gagal memuat ringkasan reset data');
+    return data;
+  }
+
+  async executeDataReset(
+    businessId: string,
+    resetType: DataResetType,
+    confirmationWord?: string,
+    customOptions?: { keepAccounts?: boolean }
+  ): Promise<DataResetResult> {
+    const res = await fetch(`/api/businesses/${businessId}/data-reset/execute`, {
+      method: 'POST',
+      headers: this.getHeaders(),
+      body: JSON.stringify({ resetType, confirmationWord, customOptions }),
+    });
+    const data = await res.json();
+    if (!res.ok) throw new Error(data.error || 'Eksekusi reset data gagal');
+    return data;
   }
 }
 

@@ -43,6 +43,7 @@ import {
   CalendarEvent,
 } from '../../types/index';
 import { NavItemKey } from '../layout/Sidebar';
+import { ResetDataModal } from '../common/ResetDataModal';
 
 interface HomePageProps {
   onNavigate: (tab: NavItemKey) => void;
@@ -98,6 +99,7 @@ export const HomePage: React.FC<HomePageProps> = ({
   const [showManageAccountsModal, setShowManageAccountsModal] = useState(false);
   const [showResetBalanceModal, setShowResetBalanceModal] = useState(false);
   const [showHistoryModal, setShowHistoryModal] = useState(false);
+  const [showResetDataModal, setShowResetDataModal] = useState(false);
   const [selectedMetricDetail, setSelectedMetricDetail] = useState<MetricDetailType | null>(null);
 
   // Target Account for Reset
@@ -316,16 +318,26 @@ export const HomePage: React.FC<HomePageProps> = ({
           </div>
         </div>
 
-        {/* Action button to edit business profile */}
+        {/* Action buttons */}
         {!user?.isReadOnly && (
-          <button
-            onClick={() => setShowEditProfileModal(true)}
-            className="flex items-center gap-2 px-4 py-2 bg-white/90 hover:bg-white text-indigo-700 text-xs font-bold rounded-full border border-sky-100 shadow-sm transition-all hover:scale-105"
-            title="Ubah Profil Bisnis"
-          >
-            <Edit3 className="w-3.5 h-3.5 text-indigo-600" />
-            <span>Edit Business Profile</span>
-          </button>
+          <div className="flex items-center gap-2">
+            <button
+              onClick={() => setShowResetDataModal(true)}
+              className="flex items-center gap-1.5 px-3.5 py-2 bg-white/80 hover:bg-rose-50 text-rose-700 text-xs font-bold rounded-full border border-rose-200/80 shadow-2xs transition-all hover:scale-105"
+              title="Reset Data Bisnis"
+            >
+              <RotateCcw className="w-3.5 h-3.5 text-rose-500" />
+              <span>Reset Data</span>
+            </button>
+            <button
+              onClick={() => setShowEditProfileModal(true)}
+              className="flex items-center gap-2 px-4 py-2 bg-white/90 hover:bg-white text-indigo-700 text-xs font-bold rounded-full border border-sky-100 shadow-sm transition-all hover:scale-105"
+              title="Ubah Profil Bisnis"
+            >
+              <Edit3 className="w-3.5 h-3.5 text-indigo-600" />
+              <span>Edit Business Profile</span>
+            </button>
+          </div>
         )}
       </div>
 
@@ -1473,6 +1485,19 @@ export const HomePage: React.FC<HomePageProps> = ({
             </div>
           </div>
         </div>
+      )}
+
+      {/* Reset Data Modal */}
+      {activeBusiness && (
+        <ResetDataModal
+          business={activeBusiness}
+          isOpen={showResetDataModal}
+          onClose={() => setShowResetDataModal(false)}
+          onSuccess={() => {
+            refreshSummary();
+            refreshBusinesses();
+          }}
+        />
       )}
     </div>
   );

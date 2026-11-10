@@ -267,6 +267,38 @@ export interface AuditLog {
 
 export type PeriodFilter = 'today' | 'this_week' | 'this_month' | 'last_month' | 'this_year' | 'custom';
 
+export type DataResetType = 'demo' | 'transactions' | 'operational' | 'settings' | 'all_business_data';
+
+export interface DataResetSummary {
+  businessId: string;
+  businessName: string;
+  transactionsCount: number;
+  ordersCount: number;
+  eventsCount: number;
+  filesCount: number;
+  accountsCount: number;
+  demoTransactionsCount: number;
+  demoOrdersCount: number;
+  demoEventsCount: number;
+  totalCashBalance: number;
+  snapshotsCount: number;
+  isReadOnly: boolean;
+}
+
+export interface DataResetResult {
+  success: boolean;
+  message: string;
+  resetType: DataResetType;
+  backupSnapshotId?: string;
+  affected: {
+    transactions?: number;
+    orders?: number;
+    events?: number;
+    files?: number;
+    accountsReset?: number;
+  };
+}
+
 export interface ThemeConfig {
   accentColor: 'blue_sky' | 'lavender' | 'periwinkle' | 'navy';
   isCompactSidebar: boolean;

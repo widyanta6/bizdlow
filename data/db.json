@@ -1142,6 +1142,36 @@
   ],
   "auditLogs": [
     {
+      "id": "log_1794300994396_wzt6",
+      "timestamp": "2026-11-10T08:56:34.396Z",
+      "userId": "u_ika",
+      "userName": "Ika",
+      "businessId": "b_tirama",
+      "action": "DATA_RESET",
+      "details": "Eksekusi Reset Data [Tipe: settings] pada Tirama. Backup snapshot dibuat: snap_mwaghg0s. Data bisnis lain dan kredensial akun tetap aman terlindungi.",
+      "status": "warning"
+    },
+    {
+      "id": "log_1794300986187_ru1e",
+      "timestamp": "2026-11-10T08:56:26.187Z",
+      "userId": "u_admin_bye",
+      "userName": "Admin Baliyoutevolution",
+      "businessId": "b_tirama",
+      "action": "DATA_RESET_DENIED",
+      "details": "Upaya reset data oleh admin transparansi read-only Admin Baliyoutevolution ditolak.",
+      "status": "denied"
+    },
+    {
+      "id": "log_1794300919788_dcdi",
+      "timestamp": "2026-11-10T08:55:19.788Z",
+      "userId": "u_ika",
+      "userName": "Ika",
+      "businessId": "biz_tirama",
+      "action": "ACCESS_DENIED",
+      "details": "Upaya akses bisnis biz_tirama ditolak untuk user Ika",
+      "status": "denied"
+    },
+    {
       "id": "log_1794295233135_vtzf",
       "timestamp": "2026-11-10T07:20:33.135Z",
       "userId": "u_ika",
@@ -1183,6 +1213,411 @@
       "action": "PAYROLL_SETTLED",
       "details": "Membayar gaji tim periode November sebesar Rp 8.500.000",
       "status": "success"
+    }
+  ],
+  "events": [
+    {
+      "id": "ev_t_1",
+      "businessId": "b_tirama",
+      "title": "Sewa Studio & Workshop Tirama",
+      "category": "rent",
+      "date": "2026-11-25",
+      "dueDate": "2026-11-25",
+      "amount": 6500000,
+      "recipient": "Pengelola Ruko Bintaro",
+      "notes": "Jatuh tempo sewa studio bulanan. Bayar via transfer BCA Bisnis.",
+      "reminderDays": 3,
+      "status": "scheduled",
+      "createdAt": "2026-11-01T08:00:00Z",
+      "createdBy": "Ika"
+    },
+    {
+      "id": "ev_t_2",
+      "businessId": "b_tirama",
+      "title": "Perpanjangan Hosting & Domain Tirama.id",
+      "category": "hosting_domain",
+      "date": "2026-11-18",
+      "dueDate": "2026-11-18",
+      "amount": 450000,
+      "recipient": "Niagahoster",
+      "notes": "Pembayaran tahunan VPS dan SSL website e-commerce.",
+      "reminderDays": 2,
+      "status": "scheduled",
+      "createdAt": "2026-11-01T08:00:00Z",
+      "createdBy": "Ika"
+    },
+    {
+      "id": "ev_t_3",
+      "businessId": "b_tirama",
+      "title": "Tagihan Listrik PLN & Internet Fiber",
+      "category": "utility",
+      "date": "2026-11-15",
+      "dueDate": "2026-11-15",
+      "amount": 1200000,
+      "recipient": "PLN & Indihome",
+      "notes": "Pengeluaran utilitas bulanan studio operasional.",
+      "reminderDays": 2,
+      "status": "scheduled",
+      "createdAt": "2026-11-01T08:00:00Z",
+      "createdBy": "Ika"
+    },
+    {
+      "id": "ev_t_4",
+      "businessId": "b_tirama",
+      "title": "Workshop Modest Pattern & Draping Masterclass",
+      "category": "workshop",
+      "date": "2026-11-22",
+      "time": "10:00 - 16:00",
+      "notes": "Pelatihan internal penjahit dan desainer junior Tirama.",
+      "status": "scheduled",
+      "createdAt": "2026-11-01T08:00:00Z",
+      "createdBy": "Ika"
+    },
+    {
+      "id": "ev_b_1",
+      "businessId": "b_bye",
+      "title": "Pelunasan Vendor Rigging & Sound Art Center",
+      "category": "vendor",
+      "date": "2026-11-24",
+      "dueDate": "2026-11-24",
+      "amount": 12000000,
+      "recipient": "CV Bali Sound & Light",
+      "notes": "Pelunasan sisa 50% panggung Festival Pemuda Bali.",
+      "reminderDays": 3,
+      "status": "scheduled",
+      "createdAt": "2026-11-01T09:00:00Z",
+      "createdBy": "Redi"
+    },
+    {
+      "id": "ev_b_2",
+      "businessId": "b_bye",
+      "title": "Bali Youth Art Festival 2026 (Day 1)",
+      "category": "event",
+      "date": "2026-11-28",
+      "time": "09:00 - 22:00",
+      "notes": "Pelaksanaan hari pertama festival seni di Art Center Denpasar.",
+      "status": "scheduled",
+      "createdAt": "2026-11-01T09:00:00Z",
+      "createdBy": "Redi"
+    }
+  ],
+  "snapshots": [
+    {
+      "id": "snap_mwaghg0s",
+      "businessId": "b_tirama",
+      "businessName": "Tirama",
+      "createdAt": "2026-11-10T08:56:34.396Z",
+      "createdBy": "Ika",
+      "resetType": "settings",
+      "snapshotData": {
+        "transactions": [
+          {
+            "id": "tx_t_1",
+            "businessId": "b_tirama",
+            "date": "2026-11-02",
+            "type": "income",
+            "category": "Penjualan Produk",
+            "amount": 7250000,
+            "accountId": "acc_tirama_bca",
+            "description": "Penerimaan DP Order ORD-TRM-2601 Butik Zhafira",
+            "orderId": "ord_t_001",
+            "createdAt": "2026-11-02T10:05:00Z",
+            "createdBy": "u_ika"
+          },
+          {
+            "id": "tx_t_2",
+            "businessId": "b_tirama",
+            "date": "2026-11-03",
+            "type": "expense",
+            "category": "HPP / Bahan Baku",
+            "amount": 4500000,
+            "accountId": "acc_tirama_bca",
+            "description": "Pembelian kain Pure Linen & Cotton Voile roll dari supplier tekstil",
+            "isCOGS": true,
+            "createdAt": "2026-11-03T14:00:00Z",
+            "createdBy": "u_ika"
+          },
+          {
+            "id": "tx_t_3",
+            "businessId": "b_tirama",
+            "date": "2026-11-04",
+            "type": "income",
+            "category": "Penjualan Produk",
+            "amount": 1560000,
+            "accountId": "acc_tirama_bca",
+            "description": "Pelunasan Order ORD-TRM-2602 Nadia Salsabila",
+            "orderId": "ord_t_002",
+            "createdAt": "2026-11-04T14:35:00Z",
+            "createdBy": "u_ika"
+          },
+          {
+            "id": "tx_t_4",
+            "businessId": "b_tirama",
+            "date": "2026-11-05",
+            "type": "expense",
+            "category": "Gaji & Tim",
+            "amount": 8500000,
+            "accountId": "acc_tirama_bca",
+            "description": "Gaji penjahit in-house & staff studio Tirama November",
+            "createdAt": "2026-11-05T09:00:00Z",
+            "createdBy": "u_ika"
+          },
+          {
+            "id": "tx_t_5",
+            "businessId": "b_tirama",
+            "date": "2026-11-06",
+            "type": "expense",
+            "category": "Komisi KOL / Afiliasi",
+            "amount": 1200000,
+            "accountId": "acc_tirama_bca",
+            "description": "Pembayaran komisi endorsement KOL @tasya.hijabstyle",
+            "createdAt": "2026-11-06T11:20:00Z",
+            "createdBy": "u_ika"
+          },
+          {
+            "id": "tx_t_6",
+            "businessId": "b_tirama",
+            "date": "2026-11-07",
+            "type": "income",
+            "category": "Penjualan Produk",
+            "amount": 3000000,
+            "accountId": "acc_tirama_bca",
+            "description": "Penerimaan DP Order ORD-TRM-2603 Galeri Hijab Bandung",
+            "orderId": "ord_t_003",
+            "createdAt": "2026-11-07T09:20:00Z",
+            "createdBy": "u_ika"
+          },
+          {
+            "id": "tx_t_7",
+            "businessId": "b_tirama",
+            "date": "2026-11-08",
+            "type": "expense",
+            "category": "Operasional & Utilitas",
+            "amount": 1100000,
+            "accountId": "acc_tirama_cash",
+            "description": "Listrik studio, packaging box kardus tebal & pita branding",
+            "createdAt": "2026-11-08T15:00:00Z",
+            "createdBy": "u_ika"
+          }
+        ],
+        "orders": [
+          {
+            "id": "ord_t_001",
+            "orderNumber": "ORD-TRM-2601",
+            "businessId": "b_tirama",
+            "customerName": "Butik Zhafira Surabaya",
+            "customerPhone": "+6281234567890",
+            "customerEmail": "order@zhafirabutik.co.id",
+            "orderDate": "2026-11-02",
+            "deadline": "2026-11-15",
+            "items": [
+              {
+                "productId": "prod_t1",
+                "name": "Ayla Linen Abaya Dress",
+                "quantity": 20,
+                "unitPrice": 485000,
+                "totalPrice": 9700000,
+                "cogsPerUnit": 210000
+              },
+              {
+                "productId": "prod_t2",
+                "name": "Sora Relaxed Linen Shirt",
+                "quantity": 15,
+                "unitPrice": 320000,
+                "totalPrice": 4800000,
+                "cogsPerUnit": 135000
+              }
+            ],
+            "totalAmount": 14500000,
+            "downPayment": 7250000,
+            "totalPaid": 7250000,
+            "remainingBalance": 7250000,
+            "paymentStatus": "partial",
+            "fulfillmentStatus": "in_progress",
+            "payments": [
+              {
+                "id": "pay_t_001_1",
+                "date": "2026-11-02",
+                "amount": 7250000,
+                "accountId": "acc_tirama_bca",
+                "type": "dp",
+                "note": "DP 50% via transfer BCA"
+              }
+            ],
+            "notes": "Kirim via kargo udara ke Surabaya. Quality control ekstra pada kancing abaya.",
+            "createdAt": "2026-11-02T10:00:00Z",
+            "updatedAt": "2026-11-02T10:00:00Z"
+          },
+          {
+            "id": "ord_t_002",
+            "orderNumber": "ORD-TRM-2602",
+            "businessId": "b_tirama",
+            "customerName": "Nadia Salsabila",
+            "customerPhone": "+628119876543",
+            "customerEmail": "nadia.salsa@gmail.com",
+            "orderDate": "2026-11-04",
+            "deadline": "2026-11-10",
+            "items": [
+              {
+                "productId": "prod_t1",
+                "name": "Ayla Linen Abaya Dress",
+                "quantity": 2,
+                "unitPrice": 485000,
+                "totalPrice": 970000,
+                "cogsPerUnit": 210000
+              },
+              {
+                "productId": "prod_t3",
+                "name": "Raya Pleated Cullote Pants",
+                "quantity": 2,
+                "unitPrice": 295000,
+                "totalPrice": 590000,
+                "cogsPerUnit": 120000
+              }
+            ],
+            "totalAmount": 1560000,
+            "downPayment": 1560000,
+            "totalPaid": 1560000,
+            "remainingBalance": 0,
+            "paymentStatus": "paid",
+            "fulfillmentStatus": "completed",
+            "payments": [
+              {
+                "id": "pay_t_002_1",
+                "date": "2026-11-04",
+                "amount": 1560000,
+                "accountId": "acc_tirama_bca",
+                "type": "settlement",
+                "note": "Pelunasan lunas di awal via BCA"
+              }
+            ],
+            "notes": "Paket gift box edisi Idul Adha/special ribbon.",
+            "createdAt": "2026-11-04T14:30:00Z",
+            "updatedAt": "2026-11-06T16:00:00Z"
+          },
+          {
+            "id": "ord_t_003",
+            "orderNumber": "ORD-TRM-2603",
+            "businessId": "b_tirama",
+            "customerName": "Galeri Hijab Bandung",
+            "customerPhone": "+628198711223",
+            "orderDate": "2026-11-07",
+            "deadline": "2026-11-18",
+            "items": [
+              {
+                "productId": "prod_t2",
+                "name": "Sora Relaxed Linen Shirt",
+                "quantity": 30,
+                "unitPrice": 310000,
+                "totalPrice": 9300000,
+                "cogsPerUnit": 135000
+              }
+            ],
+            "totalAmount": 9300000,
+            "downPayment": 3000000,
+            "totalPaid": 3000000,
+            "remainingBalance": 6300000,
+            "paymentStatus": "partial",
+            "fulfillmentStatus": "new",
+            "payments": [
+              {
+                "id": "pay_t_003_1",
+                "date": "2026-11-07",
+                "amount": 3000000,
+                "accountId": "acc_tirama_bca",
+                "type": "dp",
+                "note": "DP booking produksi"
+              }
+            ],
+            "notes": "Pre-order batch 3 warna Sage Green & Dusty Rose.",
+            "createdAt": "2026-11-07T09:15:00Z",
+            "updatedAt": "2026-11-07T09:15:00Z"
+          }
+        ],
+        "events": [
+          {
+            "id": "ev_t_1",
+            "businessId": "b_tirama",
+            "title": "Sewa Studio & Workshop Tirama",
+            "category": "rent",
+            "date": "2026-11-25",
+            "dueDate": "2026-11-25",
+            "amount": 6500000,
+            "recipient": "Pengelola Ruko Bintaro",
+            "notes": "Jatuh tempo sewa studio bulanan. Bayar via transfer BCA Bisnis.",
+            "reminderDays": 3,
+            "status": "scheduled",
+            "createdAt": "2026-11-01T08:00:00Z",
+            "createdBy": "Ika"
+          },
+          {
+            "id": "ev_t_2",
+            "businessId": "b_tirama",
+            "title": "Perpanjangan Hosting & Domain Tirama.id",
+            "category": "hosting_domain",
+            "date": "2026-11-18",
+            "dueDate": "2026-11-18",
+            "amount": 450000,
+            "recipient": "Niagahoster",
+            "notes": "Pembayaran tahunan VPS dan SSL website e-commerce.",
+            "reminderDays": 2,
+            "status": "scheduled",
+            "createdAt": "2026-11-01T08:00:00Z",
+            "createdBy": "Ika"
+          },
+          {
+            "id": "ev_t_3",
+            "businessId": "b_tirama",
+            "title": "Tagihan Listrik PLN & Internet Fiber",
+            "category": "utility",
+            "date": "2026-11-15",
+            "dueDate": "2026-11-15",
+            "amount": 1200000,
+            "recipient": "PLN & Indihome",
+            "notes": "Pengeluaran utilitas bulanan studio operasional.",
+            "reminderDays": 2,
+            "status": "scheduled",
+            "createdAt": "2026-11-01T08:00:00Z",
+            "createdBy": "Ika"
+          },
+          {
+            "id": "ev_t_4",
+            "businessId": "b_tirama",
+            "title": "Workshop Modest Pattern & Draping Masterclass",
+            "category": "workshop",
+            "date": "2026-11-22",
+            "time": "10:00 - 16:00",
+            "notes": "Pelatihan internal penjahit dan desainer junior Tirama.",
+            "status": "scheduled",
+            "createdAt": "2026-11-01T08:00:00Z",
+            "createdBy": "Ika"
+          }
+        ],
+        "accounts": [
+          {
+            "id": "acc_tirama_bca",
+            "businessId": "b_tirama",
+            "bankName": "BCA Bisnis",
+            "accountNumber": "8820-192-331",
+            "holderName": "PT Tirama Moda Kreasi",
+            "type": "bank",
+            "initialBalance": 50000000,
+            "currentBalance": 78450000,
+            "updatedAt": "2026-11-01T00:00:00Z"
+          },
+          {
+            "id": "acc_tirama_cash",
+            "businessId": "b_tirama",
+            "bankName": "Kas Toko / Petty Cash",
+            "accountNumber": "CASH-TIRAMA-01",
+            "holderName": "Kasir Utama Tirama",
+            "type": "cash",
+            "initialBalance": 5000000,
+            "currentBalance": 6850000,
+            "updatedAt": "2026-11-05T00:00:00Z"
+          }
+        ]
+      }
     }
   ]
 }

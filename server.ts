@@ -503,6 +503,33 @@ app.post('/api/businesses/:id/demo-data/clean', authMiddleware, (req: Authentica
   }
 });
 
+// Comprehensive Data Reset Endpoints (PRD Section 4)
+app.get('/api/businesses/:id/data-reset/summary', authMiddleware, (req: AuthenticatedRequest, res: Response) => {
+  try {
+    const summary = storage.getDataResetSummary(req.user!, req.params.id);
+    return res.json(summary);
+  } catch (err: any) {
+    return res.status(403).json({ error: err.message });
+  }
+});
+
+app.post('/api/businesses/:id/data-reset/execute', authMiddleware, (req: AuthenticatedRequest, res: Response) => {
+  try {
+    const { resetType, confirmationWord, customOptions } = req.body;
+    if (!resetType) {
+      return res.status(400).json({ error: 'Jenis reset data wajib dipilih' });
+    }
+    const result = storage.executeDataReset(req.user!, req.params.id, {
+      resetType,
+      confirmationWord,
+      customOptions,
+    });
+    return res.json(result);
+  } catch (err: any) {
+    return res.status(403).json({ error: err.message });
+  }
+});
+
 // Files & Folders Endpoints
 app.get('/api/businesses/:id/folders', authMiddleware, (req: AuthenticatedRequest, res: Response) => {
   const folders = storage.getFolders(req.user!, req.params.id);

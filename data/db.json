@@ -1,0 +1,1188 @@
+{
+  "users": [
+    {
+      "id": "u_ika",
+      "name": "Ika",
+      "email": "ika@bizflow.id",
+      "role": "owner",
+      "isReadOnly": false,
+      "allowedBusinessIds": [
+        "b_tirama",
+        "b_chemi"
+      ],
+      "avatar": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=150&auto=format&fit=crop&q=80",
+      "passwordHash": "password123"
+    },
+    {
+      "id": "u_redi",
+      "name": "Redi",
+      "email": "redi@bizflow.id",
+      "role": "owner",
+      "isReadOnly": false,
+      "allowedBusinessIds": [
+        "b_bye",
+        "b_metamorph",
+        "b_presta"
+      ],
+      "avatar": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&auto=format&fit=crop&q=80",
+      "passwordHash": "password123"
+    },
+    {
+      "id": "u_admin_bye",
+      "name": "Admin Baliyoutevolution",
+      "email": "admin@baliyoutevolution.com",
+      "role": "admin",
+      "isReadOnly": true,
+      "allowedBusinessIds": [
+        "b_tirama",
+        "b_chemi",
+        "b_bye",
+        "b_metamorph",
+        "b_presta"
+      ],
+      "avatar": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=150&auto=format&fit=crop&q=80",
+      "passwordHash": "password123"
+    }
+  ],
+  "businesses": [
+    {
+      "id": "b_tirama",
+      "ownerId": "u_ika",
+      "name": "Tirama",
+      "tagline": "Contemporary Fashion & Modest Apparel",
+      "description": "Brand busana muslimah kontemporer & casualwear wanita dengan fokus material premium linen & rayon.",
+      "category": "Fashion & Apparel",
+      "currency": "IDR",
+      "isArchived": false,
+      "createdAt": "2024-01-15T08:00:00Z",
+      "taxRate": 0.11
+    },
+    {
+      "id": "b_chemi",
+      "ownerId": "u_ika",
+      "name": "CHEMI",
+      "tagline": "Clean Beauty & Derma Care",
+      "description": "Formulasi skincare berbasis bahan alami dan teruji dermatologis untuk kulit tropis Indonesia.",
+      "category": "Cosmetics & Skincare",
+      "currency": "IDR",
+      "isArchived": false,
+      "createdAt": "2024-03-10T10:00:00Z",
+      "taxRate": 0.11
+    },
+    {
+      "id": "b_bye",
+      "ownerId": "u_redi",
+      "name": "BYE (Bali Youth Evolution)",
+      "tagline": "Creative Event & Experience Agency",
+      "description": "Penyelenggara festival seni, pameran budaya, workshop kreator muda, dan brand activations di Bali.",
+      "category": "Creative Agency & Events",
+      "currency": "IDR",
+      "isArchived": false,
+      "createdAt": "2023-08-01T09:00:00Z",
+      "taxRate": 0.11
+    },
+    {
+      "id": "b_metamorph",
+      "ownerId": "u_redi",
+      "name": "Metamorph",
+      "tagline": "Digital Media Production & Studio",
+      "description": "Rumah produksi komersial, TVC, visual branding, dan kampanye video digital.",
+      "category": "Digital Production",
+      "currency": "IDR",
+      "isArchived": false,
+      "createdAt": "2023-11-20T11:00:00Z",
+      "taxRate": 0.11
+    },
+    {
+      "id": "b_presta",
+      "ownerId": "u_redi",
+      "name": "Presta Media",
+      "tagline": "Growth Marketing & Outdoor Media",
+      "description": "Jaringan media periklanan OOH (videotron, billboard) dan performance ad buying.",
+      "category": "Advertising & Media",
+      "currency": "IDR",
+      "isArchived": false,
+      "createdAt": "2024-02-01T08:30:00Z",
+      "taxRate": 0.11
+    }
+  ],
+  "accounts": [
+    {
+      "id": "acc_tirama_bca",
+      "businessId": "b_tirama",
+      "bankName": "BCA Bisnis",
+      "accountNumber": "8820-192-331",
+      "holderName": "PT Tirama Moda Kreasi",
+      "type": "bank",
+      "initialBalance": 50000000,
+      "currentBalance": 78450000,
+      "updatedAt": "2026-11-01T00:00:00Z"
+    },
+    {
+      "id": "acc_tirama_cash",
+      "businessId": "b_tirama",
+      "bankName": "Kas Toko / Petty Cash",
+      "accountNumber": "CASH-TIRAMA-01",
+      "holderName": "Kasir Utama Tirama",
+      "type": "cash",
+      "initialBalance": 5000000,
+      "currentBalance": 6850000,
+      "updatedAt": "2026-11-05T00:00:00Z"
+    },
+    {
+      "id": "acc_chemi_mandiri",
+      "businessId": "b_chemi",
+      "bankName": "Mandiri Giro Bisnis",
+      "accountNumber": "142-00-998821-3",
+      "holderName": "CHEMI Derma Nusantara",
+      "type": "bank",
+      "initialBalance": 40000000,
+      "currentBalance": 62300000,
+      "updatedAt": "2026-11-01T00:00:00Z"
+    },
+    {
+      "id": "acc_bye_bca",
+      "businessId": "b_bye",
+      "bankName": "BCA Prioritas",
+      "accountNumber": "7721-002-889",
+      "holderName": "Bali Youth Evolution",
+      "type": "bank",
+      "initialBalance": 120000000,
+      "currentBalance": 145200000,
+      "updatedAt": "2026-11-01T00:00:00Z"
+    },
+    {
+      "id": "acc_meta_bca",
+      "businessId": "b_metamorph",
+      "bankName": "BCA Operasional",
+      "accountNumber": "6610-221-901",
+      "holderName": "Studio Metamorph Media",
+      "type": "bank",
+      "initialBalance": 35000000,
+      "currentBalance": 41800000,
+      "updatedAt": "2026-11-01T00:00:00Z"
+    },
+    {
+      "id": "acc_presta_mandiri",
+      "businessId": "b_presta",
+      "bankName": "Mandiri Bisnis",
+      "accountNumber": "137-00-441122-8",
+      "holderName": "Presta Media Periklanan",
+      "type": "bank",
+      "initialBalance": 60000000,
+      "currentBalance": 73500000,
+      "updatedAt": "2026-11-01T00:00:00Z"
+    }
+  ],
+  "balanceCorrections": [],
+  "transactions": [
+    {
+      "id": "tx_t_1",
+      "businessId": "b_tirama",
+      "date": "2026-11-02",
+      "type": "income",
+      "category": "Penjualan Produk",
+      "amount": 7250000,
+      "accountId": "acc_tirama_bca",
+      "description": "Penerimaan DP Order ORD-TRM-2601 Butik Zhafira",
+      "orderId": "ord_t_001",
+      "createdAt": "2026-11-02T10:05:00Z",
+      "createdBy": "u_ika"
+    },
+    {
+      "id": "tx_t_2",
+      "businessId": "b_tirama",
+      "date": "2026-11-03",
+      "type": "expense",
+      "category": "HPP / Bahan Baku",
+      "amount": 4500000,
+      "accountId": "acc_tirama_bca",
+      "description": "Pembelian kain Pure Linen & Cotton Voile roll dari supplier tekstil",
+      "isCOGS": true,
+      "createdAt": "2026-11-03T14:00:00Z",
+      "createdBy": "u_ika"
+    },
+    {
+      "id": "tx_t_3",
+      "businessId": "b_tirama",
+      "date": "2026-11-04",
+      "type": "income",
+      "category": "Penjualan Produk",
+      "amount": 1560000,
+      "accountId": "acc_tirama_bca",
+      "description": "Pelunasan Order ORD-TRM-2602 Nadia Salsabila",
+      "orderId": "ord_t_002",
+      "createdAt": "2026-11-04T14:35:00Z",
+      "createdBy": "u_ika"
+    },
+    {
+      "id": "tx_t_4",
+      "businessId": "b_tirama",
+      "date": "2026-11-05",
+      "type": "expense",
+      "category": "Gaji & Tim",
+      "amount": 8500000,
+      "accountId": "acc_tirama_bca",
+      "description": "Gaji penjahit in-house & staff studio Tirama November",
+      "createdAt": "2026-11-05T09:00:00Z",
+      "createdBy": "u_ika"
+    },
+    {
+      "id": "tx_t_5",
+      "businessId": "b_tirama",
+      "date": "2026-11-06",
+      "type": "expense",
+      "category": "Komisi KOL / Afiliasi",
+      "amount": 1200000,
+      "accountId": "acc_tirama_bca",
+      "description": "Pembayaran komisi endorsement KOL @tasya.hijabstyle",
+      "createdAt": "2026-11-06T11:20:00Z",
+      "createdBy": "u_ika"
+    },
+    {
+      "id": "tx_t_6",
+      "businessId": "b_tirama",
+      "date": "2026-11-07",
+      "type": "income",
+      "category": "Penjualan Produk",
+      "amount": 3000000,
+      "accountId": "acc_tirama_bca",
+      "description": "Penerimaan DP Order ORD-TRM-2603 Galeri Hijab Bandung",
+      "orderId": "ord_t_003",
+      "createdAt": "2026-11-07T09:20:00Z",
+      "createdBy": "u_ika"
+    },
+    {
+      "id": "tx_t_7",
+      "businessId": "b_tirama",
+      "date": "2026-11-08",
+      "type": "expense",
+      "category": "Operasional & Utilitas",
+      "amount": 1100000,
+      "accountId": "acc_tirama_cash",
+      "description": "Listrik studio, packaging box kardus tebal & pita branding",
+      "createdAt": "2026-11-08T15:00:00Z",
+      "createdBy": "u_ika"
+    },
+    {
+      "id": "tx_c_1",
+      "businessId": "b_chemi",
+      "date": "2026-11-03",
+      "type": "income",
+      "category": "Penjualan Produk",
+      "amount": 15000000,
+      "accountId": "acc_chemi_mandiri",
+      "description": "Penerimaan pelunasan order Apotek & Derma Care Bali ORD-CHM-1101",
+      "orderId": "ord_c_001",
+      "createdAt": "2026-11-03T11:10:00Z",
+      "createdBy": "u_ika"
+    },
+    {
+      "id": "tx_c_2",
+      "businessId": "b_chemi",
+      "date": "2026-11-04",
+      "type": "expense",
+      "category": "HPP / Bahan Baku",
+      "amount": 4200000,
+      "accountId": "acc_chemi_mandiri",
+      "description": "Bahan aktif Centella Asiatica & botol pipet amber UV grade",
+      "isCOGS": true,
+      "createdAt": "2026-11-04T10:00:00Z",
+      "createdBy": "u_ika"
+    },
+    {
+      "id": "tx_c_3",
+      "businessId": "b_chemi",
+      "date": "2026-11-06",
+      "type": "expense",
+      "category": "Pemasaran & Iklan",
+      "amount": 2500000,
+      "accountId": "acc_chemi_mandiri",
+      "description": "Ads TikTok & Instagram Meta Ads kampanye Sunscreen",
+      "createdAt": "2026-11-06T16:00:00Z",
+      "createdBy": "u_ika"
+    },
+    {
+      "id": "tx_b_1",
+      "businessId": "b_bye",
+      "date": "2026-11-01",
+      "type": "income",
+      "category": "Penjualan Jasa Event",
+      "amount": 20000000,
+      "accountId": "acc_bye_bca",
+      "description": "DP Term 1 Festival Kreatif Pemuda Bali ORD-BYE-2601",
+      "orderId": "ord_b_001",
+      "createdAt": "2026-11-01T09:10:00Z",
+      "createdBy": "u_redi"
+    },
+    {
+      "id": "tx_b_2",
+      "businessId": "b_bye",
+      "date": "2026-11-03",
+      "type": "expense",
+      "category": "HPP / Biaya Langsung Event",
+      "amount": 8500000,
+      "accountId": "acc_bye_bca",
+      "description": "Sewa venue Art Center & uang muka sound system rig",
+      "isCOGS": true,
+      "createdAt": "2026-11-03T13:00:00Z",
+      "createdBy": "u_redi"
+    },
+    {
+      "id": "tx_b_3",
+      "businessId": "b_bye",
+      "date": "2026-11-06",
+      "type": "expense",
+      "category": "Gaji & Tim",
+      "amount": 6000000,
+      "accountId": "acc_bye_bca",
+      "description": "Honor tim event planner & koordinator lapangan",
+      "createdAt": "2026-11-06T15:00:00Z",
+      "createdBy": "u_redi"
+    },
+    {
+      "id": "tx_m_1",
+      "businessId": "b_metamorph",
+      "date": "2026-11-05",
+      "type": "income",
+      "category": "Penjualan Produksi Video",
+      "amount": 14000000,
+      "accountId": "acc_meta_bca",
+      "description": "DP 50% Video Komersial Resort Maya Ubud ORD-MET-0801",
+      "orderId": "ord_m_001",
+      "createdAt": "2026-11-05T13:10:00Z",
+      "createdBy": "u_redi"
+    },
+    {
+      "id": "tx_m_2",
+      "businessId": "b_metamorph",
+      "date": "2026-11-07",
+      "type": "expense",
+      "category": "HPP / Kru & Sewa Lensa",
+      "amount": 4500000,
+      "accountId": "acc_meta_bca",
+      "description": "Sewa kamera Sony FX6 & lighting Aputure 600d",
+      "isCOGS": true,
+      "createdAt": "2026-11-07T11:00:00Z",
+      "createdBy": "u_redi"
+    },
+    {
+      "id": "tx_p_1",
+      "businessId": "b_presta",
+      "date": "2026-11-02",
+      "type": "income",
+      "category": "Penjualan Media Reklame",
+      "amount": 35000000,
+      "accountId": "acc_presta_mandiri",
+      "description": "Pelunasan Slot Videotron Seminyak ORD-PRS-5501",
+      "orderId": "ord_p_001",
+      "createdAt": "2026-11-02T15:15:00Z",
+      "createdBy": "u_redi"
+    },
+    {
+      "id": "tx_p_2",
+      "businessId": "b_presta",
+      "date": "2026-11-04",
+      "type": "expense",
+      "category": "HPP / Biaya Listrik & Sewa Titik",
+      "amount": 12000000,
+      "accountId": "acc_presta_mandiri",
+      "description": "Sewa tiang reklame pemda & pasokan daya gardu videotron",
+      "isCOGS": true,
+      "createdAt": "2026-11-04T12:00:00Z",
+      "createdBy": "u_redi"
+    }
+  ],
+  "products": [
+    {
+      "id": "prod_t1",
+      "businessId": "b_tirama",
+      "sku": "TRM-LIN-01",
+      "name": "Ayla Linen Abaya Dress",
+      "category": "Dress & Abaya",
+      "sellingPrice": 485000,
+      "cogs": 210000,
+      "stockQuantity": 84,
+      "minStock": 20,
+      "unit": "pcs"
+    },
+    {
+      "id": "prod_t2",
+      "businessId": "b_tirama",
+      "sku": "TRM-BLS-02",
+      "name": "Sora Relaxed Linen Shirt",
+      "category": "Tops & Blouse",
+      "sellingPrice": 320000,
+      "cogs": 135000,
+      "stockQuantity": 110,
+      "minStock": 25,
+      "unit": "pcs"
+    },
+    {
+      "id": "prod_t3",
+      "businessId": "b_tirama",
+      "sku": "TRM-PNT-03",
+      "name": "Raya Pleated Cullote Pants",
+      "category": "Bottoms",
+      "sellingPrice": 295000,
+      "cogs": 120000,
+      "stockQuantity": 65,
+      "minStock": 15,
+      "unit": "pcs"
+    },
+    {
+      "id": "prod_c1",
+      "businessId": "b_chemi",
+      "sku": "CHM-SER-01",
+      "name": "Centella Barrier Repair Serum 30ml",
+      "category": "Serum",
+      "sellingPrice": 165000,
+      "cogs": 58000,
+      "stockQuantity": 240,
+      "minStock": 50,
+      "unit": "botol"
+    },
+    {
+      "id": "prod_c2",
+      "businessId": "b_chemi",
+      "sku": "CHM-SUN-02",
+      "name": "Invisible Water Gel Sunscreen SPF 50+",
+      "category": "Sun Protection",
+      "sellingPrice": 135000,
+      "cogs": 45000,
+      "stockQuantity": 310,
+      "minStock": 60,
+      "unit": "tube"
+    },
+    {
+      "id": "prod_c3",
+      "businessId": "b_chemi",
+      "sku": "CHM-CLN-03",
+      "name": "Low pH Amino Foaming Cleanser 100ml",
+      "category": "Cleanser",
+      "sellingPrice": 110000,
+      "cogs": 36000,
+      "stockQuantity": 195,
+      "minStock": 40,
+      "unit": "tube"
+    },
+    {
+      "id": "prod_b1",
+      "businessId": "b_bye",
+      "sku": "BYE-PKG-FEST",
+      "name": "End-to-End Festival Production Package",
+      "category": "Event Production",
+      "sellingPrice": 45000000,
+      "cogs": 26000000,
+      "stockQuantity": 10,
+      "minStock": 1,
+      "unit": "event"
+    },
+    {
+      "id": "prod_b2",
+      "businessId": "b_bye",
+      "sku": "BYE-PKG-WKSH",
+      "name": "Creative Workshop Organizer (1 Day)",
+      "category": "Workshop",
+      "sellingPrice": 12000000,
+      "cogs": 6500000,
+      "stockQuantity": 20,
+      "minStock": 2,
+      "unit": "session"
+    },
+    {
+      "id": "prod_m1",
+      "businessId": "b_metamorph",
+      "sku": "MET-TVC-01",
+      "name": "Commercial Brand Video 60s (4K HDR)",
+      "category": "Video Production",
+      "sellingPrice": 28000000,
+      "cogs": 14000000,
+      "stockQuantity": 12,
+      "minStock": 2,
+      "unit": "proyek"
+    },
+    {
+      "id": "prod_p1",
+      "businessId": "b_presta",
+      "sku": "PRS-OOH-SMY",
+      "name": "Videotron Seminyak Sunset Road (1 Bulan)",
+      "category": "OOH Advertising",
+      "sellingPrice": 35000000,
+      "cogs": 18000000,
+      "stockQuantity": 5,
+      "minStock": 1,
+      "unit": "slot"
+    }
+  ],
+  "orders": [
+    {
+      "id": "ord_t_001",
+      "orderNumber": "ORD-TRM-2601",
+      "businessId": "b_tirama",
+      "customerName": "Butik Zhafira Surabaya",
+      "customerPhone": "+6281234567890",
+      "customerEmail": "order@zhafirabutik.co.id",
+      "orderDate": "2026-11-02",
+      "deadline": "2026-11-15",
+      "items": [
+        {
+          "productId": "prod_t1",
+          "name": "Ayla Linen Abaya Dress",
+          "quantity": 20,
+          "unitPrice": 485000,
+          "totalPrice": 9700000,
+          "cogsPerUnit": 210000
+        },
+        {
+          "productId": "prod_t2",
+          "name": "Sora Relaxed Linen Shirt",
+          "quantity": 15,
+          "unitPrice": 320000,
+          "totalPrice": 4800000,
+          "cogsPerUnit": 135000
+        }
+      ],
+      "totalAmount": 14500000,
+      "downPayment": 7250000,
+      "totalPaid": 7250000,
+      "remainingBalance": 7250000,
+      "paymentStatus": "partial",
+      "fulfillmentStatus": "in_progress",
+      "payments": [
+        {
+          "id": "pay_t_001_1",
+          "date": "2026-11-02",
+          "amount": 7250000,
+          "accountId": "acc_tirama_bca",
+          "type": "dp",
+          "note": "DP 50% via transfer BCA"
+        }
+      ],
+      "notes": "Kirim via kargo udara ke Surabaya. Quality control ekstra pada kancing abaya.",
+      "createdAt": "2026-11-02T10:00:00Z",
+      "updatedAt": "2026-11-02T10:00:00Z"
+    },
+    {
+      "id": "ord_t_002",
+      "orderNumber": "ORD-TRM-2602",
+      "businessId": "b_tirama",
+      "customerName": "Nadia Salsabila",
+      "customerPhone": "+628119876543",
+      "customerEmail": "nadia.salsa@gmail.com",
+      "orderDate": "2026-11-04",
+      "deadline": "2026-11-10",
+      "items": [
+        {
+          "productId": "prod_t1",
+          "name": "Ayla Linen Abaya Dress",
+          "quantity": 2,
+          "unitPrice": 485000,
+          "totalPrice": 970000,
+          "cogsPerUnit": 210000
+        },
+        {
+          "productId": "prod_t3",
+          "name": "Raya Pleated Cullote Pants",
+          "quantity": 2,
+          "unitPrice": 295000,
+          "totalPrice": 590000,
+          "cogsPerUnit": 120000
+        }
+      ],
+      "totalAmount": 1560000,
+      "downPayment": 1560000,
+      "totalPaid": 1560000,
+      "remainingBalance": 0,
+      "paymentStatus": "paid",
+      "fulfillmentStatus": "completed",
+      "payments": [
+        {
+          "id": "pay_t_002_1",
+          "date": "2026-11-04",
+          "amount": 1560000,
+          "accountId": "acc_tirama_bca",
+          "type": "settlement",
+          "note": "Pelunasan lunas di awal via BCA"
+        }
+      ],
+      "notes": "Paket gift box edisi Idul Adha/special ribbon.",
+      "createdAt": "2026-11-04T14:30:00Z",
+      "updatedAt": "2026-11-06T16:00:00Z"
+    },
+    {
+      "id": "ord_t_003",
+      "orderNumber": "ORD-TRM-2603",
+      "businessId": "b_tirama",
+      "customerName": "Galeri Hijab Bandung",
+      "customerPhone": "+628198711223",
+      "orderDate": "2026-11-07",
+      "deadline": "2026-11-18",
+      "items": [
+        {
+          "productId": "prod_t2",
+          "name": "Sora Relaxed Linen Shirt",
+          "quantity": 30,
+          "unitPrice": 310000,
+          "totalPrice": 9300000,
+          "cogsPerUnit": 135000
+        }
+      ],
+      "totalAmount": 9300000,
+      "downPayment": 3000000,
+      "totalPaid": 3000000,
+      "remainingBalance": 6300000,
+      "paymentStatus": "partial",
+      "fulfillmentStatus": "new",
+      "payments": [
+        {
+          "id": "pay_t_003_1",
+          "date": "2026-11-07",
+          "amount": 3000000,
+          "accountId": "acc_tirama_bca",
+          "type": "dp",
+          "note": "DP booking produksi"
+        }
+      ],
+      "notes": "Pre-order batch 3 warna Sage Green & Dusty Rose.",
+      "createdAt": "2026-11-07T09:15:00Z",
+      "updatedAt": "2026-11-07T09:15:00Z"
+    },
+    {
+      "id": "ord_c_001",
+      "orderNumber": "ORD-CHM-1101",
+      "businessId": "b_chemi",
+      "customerName": "Apotek & Derma Care Bali",
+      "customerPhone": "+6281333444555",
+      "customerEmail": "procurement@baliderma.com",
+      "orderDate": "2026-11-03",
+      "deadline": "2026-11-12",
+      "items": [
+        {
+          "productId": "prod_c1",
+          "name": "Centella Barrier Repair Serum 30ml",
+          "quantity": 50,
+          "unitPrice": 165000,
+          "totalPrice": 8250000,
+          "cogsPerUnit": 58000
+        },
+        {
+          "productId": "prod_c2",
+          "name": "Invisible Water Gel Sunscreen SPF 50+",
+          "quantity": 50,
+          "unitPrice": 135000,
+          "totalPrice": 6750000,
+          "cogsPerUnit": 45000
+        }
+      ],
+      "totalAmount": 15000000,
+      "downPayment": 15000000,
+      "totalPaid": 15000000,
+      "remainingBalance": 0,
+      "paymentStatus": "paid",
+      "fulfillmentStatus": "in_progress",
+      "payments": [
+        {
+          "id": "pay_c_001_1",
+          "date": "2026-11-03",
+          "amount": 15000000,
+          "accountId": "acc_chemi_mandiri",
+          "type": "settlement",
+          "note": "Transfer Mandiri Bisnis Lunas"
+        }
+      ],
+      "notes": "Lampirkan COA (Certificate of Analysis) & izin edar BPOM.",
+      "createdAt": "2026-11-03T11:00:00Z",
+      "updatedAt": "2026-11-03T11:00:00Z"
+    },
+    {
+      "id": "ord_b_001",
+      "orderNumber": "ORD-BYE-2601",
+      "businessId": "b_bye",
+      "customerName": "Dinas Pariwisata & Ekonomi Kreatif Bali",
+      "customerPhone": "+62361-224455",
+      "orderDate": "2026-11-01",
+      "deadline": "2026-11-28",
+      "items": [
+        {
+          "productId": "prod_b1",
+          "name": "End-to-End Festival Production Package",
+          "quantity": 1,
+          "unitPrice": 45000000,
+          "totalPrice": 45000000,
+          "cogsPerUnit": 26000000
+        }
+      ],
+      "totalAmount": 45000000,
+      "downPayment": 20000000,
+      "totalPaid": 20000000,
+      "remainingBalance": 25000000,
+      "paymentStatus": "partial",
+      "fulfillmentStatus": "in_progress",
+      "payments": [
+        {
+          "id": "pay_b_001_1",
+          "date": "2026-11-01",
+          "amount": 20000000,
+          "accountId": "acc_bye_bca",
+          "type": "dp",
+          "note": "DP Term 1 Festival Kreatif Pemuda Bali"
+        }
+      ],
+      "notes": "Pelunasan sisa H-3 pelaksanaan event.",
+      "createdAt": "2026-11-01T09:00:00Z",
+      "updatedAt": "2026-11-01T09:00:00Z"
+    },
+    {
+      "id": "ord_m_001",
+      "orderNumber": "ORD-MET-0801",
+      "businessId": "b_metamorph",
+      "customerName": "Resort Maya Ubud",
+      "customerPhone": "+62361-977888",
+      "orderDate": "2026-11-05",
+      "deadline": "2026-11-20",
+      "items": [
+        {
+          "productId": "prod_m1",
+          "name": "Commercial Brand Video 60s (4K HDR)",
+          "quantity": 1,
+          "unitPrice": 28000000,
+          "totalPrice": 28000000,
+          "cogsPerUnit": 14000000
+        }
+      ],
+      "totalAmount": 28000000,
+      "downPayment": 14000000,
+      "totalPaid": 14000000,
+      "remainingBalance": 14000000,
+      "paymentStatus": "partial",
+      "fulfillmentStatus": "in_progress",
+      "payments": [
+        {
+          "id": "pay_m_001_1",
+          "date": "2026-11-05",
+          "amount": 14000000,
+          "accountId": "acc_meta_bca",
+          "type": "dp",
+          "note": "DP 50% Produksi Video Promosi Resort"
+        }
+      ],
+      "notes": "Shooting schedule 10-12 November di Ubud.",
+      "createdAt": "2026-11-05T13:00:00Z",
+      "updatedAt": "2026-11-05T13:00:00Z"
+    },
+    {
+      "id": "ord_p_001",
+      "orderNumber": "ORD-PRS-5501",
+      "businessId": "b_presta",
+      "customerName": "Fintech DuitPintar",
+      "customerPhone": "+6221-505088",
+      "orderDate": "2026-11-02",
+      "deadline": "2026-11-30",
+      "items": [
+        {
+          "productId": "prod_p1",
+          "name": "Videotron Seminyak Sunset Road (1 Bulan)",
+          "quantity": 1,
+          "unitPrice": 35000000,
+          "totalPrice": 35000000,
+          "cogsPerUnit": 18000000
+        }
+      ],
+      "totalAmount": 35000000,
+      "downPayment": 35000000,
+      "totalPaid": 35000000,
+      "remainingBalance": 0,
+      "paymentStatus": "paid",
+      "fulfillmentStatus": "in_progress",
+      "payments": [
+        {
+          "id": "pay_p_001_1",
+          "date": "2026-11-02",
+          "amount": 35000000,
+          "accountId": "acc_presta_mandiri",
+          "type": "settlement",
+          "note": "Full payment slot tayang November"
+        }
+      ],
+      "notes": "Spot tayang berulang setiap 5 menit (18 jam/hari).",
+      "createdAt": "2026-11-02T15:00:00Z",
+      "updatedAt": "2026-11-02T15:00:00Z"
+    }
+  ],
+  "folders": [
+    {
+      "id": "f_t_fin",
+      "businessId": "b_tirama",
+      "name": "Finance",
+      "color": "#DDD6FE",
+      "createdAt": "2026-01-01"
+    },
+    {
+      "id": "f_t_inv",
+      "businessId": "b_tirama",
+      "name": "Invoices",
+      "color": "#BAE6FD",
+      "createdAt": "2026-01-01"
+    },
+    {
+      "id": "f_t_ord",
+      "businessId": "b_tirama",
+      "name": "Orders",
+      "color": "#FED7AA",
+      "createdAt": "2026-01-01"
+    },
+    {
+      "id": "f_t_rec",
+      "businessId": "b_tirama",
+      "name": "Receipts",
+      "color": "#A7F3D0",
+      "createdAt": "2026-01-01"
+    },
+    {
+      "id": "f_t_rep",
+      "businessId": "b_tirama",
+      "name": "Reports",
+      "color": "#FBCFE8",
+      "createdAt": "2026-01-01"
+    },
+    {
+      "id": "f_t_prd",
+      "businessId": "b_tirama",
+      "name": "Products",
+      "color": "#E9D5FF",
+      "createdAt": "2026-01-01"
+    },
+    {
+      "id": "f_t_mkt",
+      "businessId": "b_tirama",
+      "name": "Marketing",
+      "color": "#FEF08A",
+      "createdAt": "2026-01-01"
+    },
+    {
+      "id": "f_t_doc",
+      "businessId": "b_tirama",
+      "name": "Documents",
+      "color": "#CFFAFE",
+      "createdAt": "2026-01-01"
+    },
+    {
+      "id": "f_c_fin",
+      "businessId": "b_chemi",
+      "name": "Finance",
+      "color": "#DDD6FE",
+      "createdAt": "2026-01-01"
+    },
+    {
+      "id": "f_c_inv",
+      "businessId": "b_chemi",
+      "name": "Invoices",
+      "color": "#BAE6FD",
+      "createdAt": "2026-01-01"
+    },
+    {
+      "id": "f_c_ord",
+      "businessId": "b_chemi",
+      "name": "Orders",
+      "color": "#FED7AA",
+      "createdAt": "2026-01-01"
+    },
+    {
+      "id": "f_c_rec",
+      "businessId": "b_chemi",
+      "name": "Receipts",
+      "color": "#A7F3D0",
+      "createdAt": "2026-01-01"
+    },
+    {
+      "id": "f_c_rep",
+      "businessId": "b_chemi",
+      "name": "Reports",
+      "color": "#FBCFE8",
+      "createdAt": "2026-01-01"
+    },
+    {
+      "id": "f_c_prd",
+      "businessId": "b_chemi",
+      "name": "Products",
+      "color": "#E9D5FF",
+      "createdAt": "2026-01-01"
+    },
+    {
+      "id": "f_c_mkt",
+      "businessId": "b_chemi",
+      "name": "Marketing",
+      "color": "#FEF08A",
+      "createdAt": "2026-01-01"
+    },
+    {
+      "id": "f_c_doc",
+      "businessId": "b_chemi",
+      "name": "Documents",
+      "color": "#CFFAFE",
+      "createdAt": "2026-01-01"
+    },
+    {
+      "id": "f_b_fin",
+      "businessId": "b_bye",
+      "name": "Finance",
+      "color": "#DDD6FE",
+      "createdAt": "2026-01-01"
+    },
+    {
+      "id": "f_b_inv",
+      "businessId": "b_bye",
+      "name": "Invoices",
+      "color": "#BAE6FD",
+      "createdAt": "2026-01-01"
+    },
+    {
+      "id": "f_b_ord",
+      "businessId": "b_bye",
+      "name": "Orders",
+      "color": "#FED7AA",
+      "createdAt": "2026-01-01"
+    },
+    {
+      "id": "f_b_rec",
+      "businessId": "b_bye",
+      "name": "Receipts",
+      "color": "#A7F3D0",
+      "createdAt": "2026-01-01"
+    },
+    {
+      "id": "f_b_rep",
+      "businessId": "b_bye",
+      "name": "Reports",
+      "color": "#FBCFE8",
+      "createdAt": "2026-01-01"
+    },
+    {
+      "id": "f_b_prd",
+      "businessId": "b_bye",
+      "name": "Products",
+      "color": "#E9D5FF",
+      "createdAt": "2026-01-01"
+    },
+    {
+      "id": "f_b_mkt",
+      "businessId": "b_bye",
+      "name": "Marketing",
+      "color": "#FEF08A",
+      "createdAt": "2026-01-01"
+    },
+    {
+      "id": "f_b_doc",
+      "businessId": "b_bye",
+      "name": "Documents",
+      "color": "#CFFAFE",
+      "createdAt": "2026-01-01"
+    }
+  ],
+  "files": [
+    {
+      "id": "file_t_1",
+      "businessId": "b_tirama",
+      "name": "Invoice_ORD-TRM-2601_Zhafira.pdf",
+      "folderId": "f_t_inv",
+      "mimeType": "application/pdf",
+      "sizeBytes": 245760,
+      "url": "/assets/sample_invoice_tirama.pdf",
+      "uploadDate": "2026-11-02T10:02:00Z",
+      "uploadedBy": "Ika",
+      "isShared": true,
+      "sharedWith": [
+        "admin@baliyoutevolution.com"
+      ]
+    },
+    {
+      "id": "file_t_2",
+      "businessId": "b_tirama",
+      "name": "Nota_Kain_Linen_Supplier.jpg",
+      "folderId": "f_t_rec",
+      "mimeType": "image/jpeg",
+      "sizeBytes": 1540000,
+      "url": "https://images.unsplash.com/photo-1558769132-cb1aea458c5e?w=800&auto=format&fit=crop&q=80",
+      "uploadDate": "2026-11-03T14:02:00Z",
+      "uploadedBy": "Ika"
+    },
+    {
+      "id": "file_t_3",
+      "businessId": "b_tirama",
+      "name": "Katalog_Koleksi_Raya_2026.pdf",
+      "folderId": "f_t_prd",
+      "mimeType": "application/pdf",
+      "sizeBytes": 4890000,
+      "url": "/assets/katalog_tirama_2026.pdf",
+      "uploadDate": "2026-11-01T08:00:00Z",
+      "uploadedBy": "Ika",
+      "isShared": true
+    },
+    {
+      "id": "file_t_4",
+      "businessId": "b_tirama",
+      "name": "Laporan_Keuangan_Oktober_2026.xlsx",
+      "folderId": "f_t_rep",
+      "mimeType": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+      "sizeBytes": 520000,
+      "url": "/assets/laporan_oktober_tirama.xlsx",
+      "uploadDate": "2026-11-01T12:00:00Z",
+      "uploadedBy": "Ika"
+    },
+    {
+      "id": "file_b_1",
+      "businessId": "b_bye",
+      "name": "RAB_Festival_Pemuda_Bali_2026.xlsx",
+      "folderId": "f_b_fin",
+      "mimeType": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+      "sizeBytes": 890000,
+      "url": "/assets/rab_festival.xlsx",
+      "uploadDate": "2026-11-01T08:30:00Z",
+      "uploadedBy": "Redi"
+    },
+    {
+      "id": "file_b_2",
+      "businessId": "b_bye",
+      "name": "Surat_Izin_Venue_ArtCenter.pdf",
+      "folderId": "f_b_doc",
+      "mimeType": "application/pdf",
+      "sizeBytes": 310000,
+      "url": "/assets/izin_venue.pdf",
+      "uploadDate": "2026-11-03T10:00:00Z",
+      "uploadedBy": "Redi"
+    }
+  ],
+  "kol": [
+    {
+      "id": "kol_t_1",
+      "businessId": "b_tirama",
+      "kolName": "Tasya Farasya / @tasya.hijabstyle",
+      "platform": "Instagram & TikTok",
+      "handle": "@tasya.hijabstyle",
+      "salesGenerated": 12000000,
+      "commissionRate": 10,
+      "commissionAmount": 1200000,
+      "paymentStatus": "paid",
+      "paidDate": "2026-11-06",
+      "linkedTransactionId": "tx_t_5"
+    },
+    {
+      "id": "kol_t_2",
+      "businessId": "b_tirama",
+      "kolName": "Zaskia Adya / @zaskiainspo",
+      "platform": "TikTok",
+      "handle": "@zaskiainspo",
+      "salesGenerated": 8500000,
+      "commissionRate": 10,
+      "commissionAmount": 850000,
+      "paymentStatus": "unpaid"
+    }
+  ],
+  "payroll": [
+    {
+      "id": "payr_t_1",
+      "businessId": "b_tirama",
+      "employeeName": "Dewi Rahmawati",
+      "role": "Lead Fashion Pattern Maker",
+      "periodMonth": "2026-11",
+      "baseSalary": 4500000,
+      "allowance": 500000,
+      "deduction": 0,
+      "netSalary": 5000000,
+      "status": "paid",
+      "paidDate": "2026-11-05",
+      "linkedTransactionId": "tx_t_4"
+    },
+    {
+      "id": "payr_t_2",
+      "businessId": "b_tirama",
+      "employeeName": "Budi Santoso",
+      "role": "Quality Control & Finishing",
+      "periodMonth": "2026-11",
+      "baseSalary": 3200000,
+      "allowance": 300000,
+      "deduction": 0,
+      "netSalary": 3500000,
+      "status": "paid",
+      "paidDate": "2026-11-05",
+      "linkedTransactionId": "tx_t_4"
+    }
+  ],
+  "archives": [],
+  "blogs": [
+    {
+      "id": "blog_1",
+      "authorId": "u_ika",
+      "authorName": "Ika",
+      "title": "Catatan Strategi Koleksi Modest Ramadhan & Idul Adha 2027",
+      "content": "Fokus kuartal ini adalah penguatan rantai pasok linen premium dari Jawa Tengah. Tren warna earth tone (sand beige, sage olive, dan dusty terracotta) menunjukkan konversi 40% lebih tinggi di platform live commerce.\n\nPenting untuk menjaga rasio HPP tetap di bawah 45% agar margin kotor tetap sehat untuk menyerap biaya komisi KOL dan digital ads.",
+      "tags": [
+        "Strategi Bisnis",
+        "Modest Fashion",
+        "HPP"
+      ],
+      "createdAt": "2026-11-04T08:00:00Z",
+      "updatedAt": "2026-11-04T08:00:00Z"
+    },
+    {
+      "id": "blog_2",
+      "authorId": "u_redi",
+      "authorName": "Redi",
+      "title": "Refleksi Kurasi Event Kreatif di Bali: Community-First Approach",
+      "content": "Event anak muda di Denpasar dan Badung membutuhkan aktivasi yang otentik. Menggabungkan seni instalasi kontemporer dengan pasar kreator lokal memberi multiplier effect untuk brand sponsors.\n\nKunci keberhasilan adalah cashflow disiplin: tidak mengeluarkan uang muka vendor sebelum menerima minimal 40% DP dari sponsor/klien utama.",
+      "tags": [
+        "Creative Agency",
+        "Event Bali",
+        "Cashflow"
+      ],
+      "createdAt": "2026-11-06T10:00:00Z",
+      "updatedAt": "2026-11-06T10:00:00Z"
+    }
+  ],
+  "auditLogs": [
+    {
+      "id": "log_1794295233135_vtzf",
+      "timestamp": "2026-11-10T07:20:33.135Z",
+      "userId": "u_ika",
+      "userName": "Ika",
+      "businessId": "b_bye",
+      "action": "ACCESS_DENIED",
+      "details": "Upaya akses bisnis b_bye ditolak untuk user Ika",
+      "status": "denied"
+    },
+    {
+      "id": "log_01",
+      "timestamp": "2026-11-02T10:05:00Z",
+      "userId": "u_ika",
+      "userName": "Ika",
+      "businessId": "b_tirama",
+      "businessName": "Tirama",
+      "action": "CREATE_TRANSACTION",
+      "details": "Mencatat pemasukan DP Rp 7.250.000 untuk order ORD-TRM-2601",
+      "status": "success"
+    },
+    {
+      "id": "log_02",
+      "timestamp": "2026-11-03T14:00:00Z",
+      "userId": "u_ika",
+      "userName": "Ika",
+      "businessId": "b_tirama",
+      "businessName": "Tirama",
+      "action": "CREATE_TRANSACTION",
+      "details": "Mencatat pengeluaran HPP Bahan Baku Rp 4.500.000",
+      "status": "success"
+    },
+    {
+      "id": "log_03",
+      "timestamp": "2026-11-05T09:00:00Z",
+      "userId": "u_ika",
+      "userName": "Ika",
+      "businessId": "b_tirama",
+      "businessName": "Tirama",
+      "action": "PAYROLL_SETTLED",
+      "details": "Membayar gaji tim periode November sebesar Rp 8.500.000",
+      "status": "success"
+    }
+  ]
+}

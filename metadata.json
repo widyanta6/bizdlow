@@ -1,0 +1,6 @@
+{
+  "name": "BizFlow Multi-Brand Workspace",
+  "description": "Business Management Workspace multi-brand untuk mengelola keuangan, pesanan, kalender, dokumen cloud storage, analitik, dan AI Assistant.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
